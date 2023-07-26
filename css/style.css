@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #151d2f;
+    --btn-color: #13fc97; 
+    --convert-bg-color: #2b304d;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+}
+
+.currency-container{
+    background-color: var(--convert-bg-color);
+    padding: 20px;
+    border-radius: 20px;   
+}
+
+.currency-container .currency-header{
+    text-align: center;
+    color: white;
+}
+
+.currency-header h2{
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+.currency-header img{
+    width: 100px;
+    height: auto;
+}
+
+.currency-content label{
+    color: white;
+}
+
+.currency-content input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    padding: 5px 5px;
+    color: white;
+    font-size: 16px;
+    transition: all .2s linear;
+}
+
+.currency-content input.error{
+    border-color: red;
+}
+
+.currency-content input:focus{
+    border-color: var(--btn-color);
+    color: var(--btn-color);
+}
+
+.currency-options{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.currency-options button{
+    background-color: rgba(19, 252,151,1 );
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.currency-options select{
+    background-color: var(--btn-color);
+    font-weight: 600;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../img/triangle.png');
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%, center;
+    background-size: 15px 15px;
+}
+
+.convert-btn{
+    background-color: var(--btn-color);
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.result{
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.error-message{
+    visibility: hidden;
+    color: red;
+}
